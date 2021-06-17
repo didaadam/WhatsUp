@@ -4,7 +4,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import { Tabs, Tab, TabHeading, ScrollableTab } from 'native-base'
 import FA5 from 'react-native-vector-icons/FontAwesome5'
 import Toast from "react-native-fast-toast";
-import database from '@react-native-firebase/database';
+// import database from '@react-native-firebase/database';
 
 function Home({ navigation, routre }) {
     const [arrayChats, setArrayChats] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])

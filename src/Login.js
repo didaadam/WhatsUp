@@ -17,7 +17,7 @@ function Login({ navigation, route }) {
             <Toast ref={toast} />
             <LinearGradient colors={['#c2e8f2', '#87ddf5', '#87ddf5', '#c2e8f2']} style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#94b8f2', padding: 20, paddingTop: 20 }}>
                 <View style={{ height: '50%', width: '100%', alignItems: 'center', justifyContent: 'flex-end' }}>
-                    <TouchableOpacity onPress={() => navigation.navigate('Home')} style={{ height: 100, width: 100, backgroundColor: '#87ddf5', borderRadius: 20, alignItems:'center', justifyContent:'center'}}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Latihan')} style={{ height: 100, width: 100, backgroundColor: '#87ddf5', borderRadius: 20, alignItems:'center', justifyContent:'center'}}>
                         <FA5 name='galactic-senate' size={100}/>
                     </TouchableOpacity>
                 </View>
