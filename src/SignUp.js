@@ -10,7 +10,7 @@ const Width = Dimensions.get('screen').width
 
 function SignUp({ navigation, route }) {
     const toast = useRef(null)
-
+    //test branch
     return (
         <View style={{ flex: 1 }}>
             <Toast ref={toast} />
