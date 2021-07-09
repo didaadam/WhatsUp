@@ -43,7 +43,7 @@ function Latihan({navigation, route}) {
                         <View style={{ width: '100%', height: .5, backgroundColor: 'black' }} />
                     </View>
                     <View style={{ marginTop: 10 }}>
-                        <Text>Nomor Telepon</Text>
+                        <Text>Nomor Telepons</Text>
                         <TextInput placeholder={'contoh: 08xxxxxx'} style={{ padding: 0 }} />
                         <View style={{ width: '100%', height: .5, backgroundColor: 'black' }} />
                     </View>
