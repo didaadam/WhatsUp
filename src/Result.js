@@ -9,30 +9,31 @@ import images from './lib/image'
 const Height = Dimensions.get('screen').height
 const Width = Dimensions.get('screen').width
 
-function Login({ navigation, route }) {
+function Result({ navigation, route }) {
     const toast = useRef(null)
 
     return (
         <View style={{ flex: 1 }}>
-            <StatusBar backgroundColor={'#c2e8f2'}/>
+            <StatusBar backgroundColor={'#c2e8f2'} />
             <Toast ref={toast} />
             <LinearGradient colors={['#c2e8f2', '#F6A9C6', '#F6A9C6', '#c2e8f2']} style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#94b8f2', padding: 20, paddingTop: 20 }}>
                 <View style={{ height: '60%', width: '100%', alignItems: 'center', justifyContent: 'flex-end' }}>
+                    <Text style={{ fontSize: 24, fontWeight: 'bold', marginBottom: 50 }}>
+                        Result
+                    </Text>
                     <Image source={images.logoApp} style={{ width: 175, height: 175, borderRadius: 175 }} />
                 </View>
                 <View style={{ height: '40%', width: '100%', alignItems: 'center', paddingTop: 60 }}>
-                    <Text style={{ fontSize: 16, fontWeight: 'bold' }}>
-                        Diary Pregnancy
-                    </Text>
+
                     <Text style={{ marginTop: 10, textAlign: 'center', color: '#538491' }}>
-                        Aplikasi karya mahasiswi Sarjana Kebidanan Angkatan 2019 untuk ibu hamil , Semoga bermanfaat 🤍
+                        Congrats bunda, kamu gajadi remed 🤍
                     </Text>
-                    <TouchableOpacity onPress={() => navigation.navigate('Latihan')} style={{ marginTop: 40, borderRadius: 25, paddingHorizontal: 15, paddingVertical: 10, backgroundColor: '#3b5998', width: '100%', flexDirection: 'row', borderColor: '#3b5998', borderWidth: .3 }}>
+                    {/* <TouchableOpacity onPress={() => navigation.navigate('Latihan')} style={{ marginTop: 40, borderRadius: 25, paddingHorizontal: 15, paddingVertical: 10, backgroundColor: '#3b5998', width: '100%', flexDirection: 'row', borderColor: '#3b5998', borderWidth: .3 }}>
                         <View style={{ justifyContent: 'center', flex: 1, alignItems: 'center'}}>
-                            <Text style={{ fontWeight: '800', color: 'white' }}>Selanjutnya</Text>
+                            <Text style={{ fontWeight: '800', color: 'white' }}>Continue</Text>
                         </View>
                         <FA5 name={'angle-double-right'} size={30} color={'white'} />
-                    </TouchableOpacity>
+                    </TouchableOpacity> */}
                     <View style={{ justifyContent: 'flex-end', flex: 1, paddingBottom: 20 }}>
                         <Text style={{ marginTop: 10, textAlign: 'center', color: '#538491' }}>
                             - STIKes Abdi Nusantara Jakarta -
@@ -45,4 +46,4 @@ function Login({ navigation, route }) {
     );
 }
 
-export default Login;
+export default Result;

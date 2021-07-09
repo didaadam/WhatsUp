@@ -10,7 +10,7 @@ import { FloatingLabelInput } from 'react-native-floating-label-input';
 const Height = Dimensions.get('screen').height
 const Width = Dimensions.get('screen').width
 
-function Latihan() {
+function Latihan({navigation, route}) {
     const [username, setUsername] = useState('');
     return (
         <View style={{ flex: 1, paddingTop: 25 }}>
@@ -43,14 +43,14 @@ function Latihan() {
                         <View style={{ width: '100%', height: .5, backgroundColor: 'black' }} />
                     </View>
                     <View style={{ marginTop: 10 }}>
-                        <Text>Nomor Telepon</Text>
+                        <Text>Nomor Telepons</Text>
                         <TextInput placeholder={'contoh: 08xxxxxx'} style={{ padding: 0 }} />
                         <View style={{ width: '100%', height: .5, backgroundColor: 'black' }} />
                     </View>
                 </View>
-                <TouchableOpacity onPress={() => navigation.navigate('Latihan')} style={{ marginTop: 40, borderRadius: 25, paddingHorizontal: 15, paddingVertical: 10, backgroundColor: '#3b5998', width: '100%', flexDirection: 'row', borderColor: '#3b5998', borderWidth: .3 }}>
+                <TouchableOpacity onPress={() => navigation.navigate('StepProgress')} style={{ marginTop: 40, borderRadius: 25, paddingHorizontal: 15, paddingVertical: 10, backgroundColor: '#3b5998', width: '100%', flexDirection: 'row', borderColor: '#3b5998', borderWidth: .3 }}>
                     <View style={{ justifyContent: 'center', flex: 1, alignItems: 'center' }}>
-                        <Text style={{ fontWeight: '800', color: 'white' }}>Continue</Text>
+                        <Text style={{ fontWeight: '800', color: 'white' }}>Selanjutnya</Text>
                     </View>
                     {/* <View style={{ paddingHorizontal: 7, paddingVertical: 7, backgroundColor: 'transparent', borderRadius: 50, justifyContent: 'center' }}> */}
                     <FA5 name={'angle-double-right'} size={30} color={'white'} />
