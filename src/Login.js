@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { View, Text, TouchableOpacity, Dimensions, Image } from 'react-native'
+import { View, Text, TouchableOpacity, Dimensions, Image, StatusBar } from 'react-native'
 import LinearGradient from 'react-native-linear-gradient'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import FA5 from 'react-native-vector-icons/FontAwesome5'
@@ -15,6 +15,7 @@ function Login({ navigation, route }) {
     return (
         // <View style={{ flex: 1 }}>
         <View style={{ flex: 1 }}>
+            <StatusBar backgroundColor={'#c2e8f2'}/>
             <Toast ref={toast} />
             <LinearGradient colors={['#c2e8f2', '#F6A9C6', '#F6A9C6', '#c2e8f2']} style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#94b8f2', padding: 20, paddingTop: 20 }}>
                 <View style={{ height: '60%', width: '100%', alignItems: 'center', justifyContent: 'flex-end' }}>
