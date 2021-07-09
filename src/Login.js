@@ -31,7 +31,7 @@ function Login({ navigation, route }) {
                         Aplikasi karya mahasiswi Sarjana Kebidanan Angkatan 2019 untuk ibu hamil , Semoga bermanfaat 🤍
                     </Text>
                     {/* toast.current.show(' Dah dibilang belum dibikin buset!', { type: 'danger', icon: <FA5 name="head-side-virus" size={25} color={'white'} /> }) */}
-                    <TouchableOpacity onPress={() => navigation.navigate('Latihan')} style={{ marginTop: 40, borderRadius: 25, paddingHorizontal: 15, paddingVertical: 10, backgroundColor: '#3b5998', width: '100%', flexDirection: 'row', borderColor: '#3b5998', borderWidth: .3 }}>
+                    <TouchableOpacity onPress={() => navigation.navigate('StepProgress')} style={{ marginTop: 40, borderRadius: 25, paddingHorizontal: 15, paddingVertical: 10, backgroundColor: '#3b5998', width: '100%', flexDirection: 'row', borderColor: '#3b5998', borderWidth: .3 }}>
                         <View style={{ justifyContent: 'center', flex: 1, alignItems: 'center'}}>
                             <Text style={{ fontWeight: '800', color: 'white' }}>Continue</Text>
                         </View>
