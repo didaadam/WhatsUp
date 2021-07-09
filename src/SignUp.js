@@ -12,7 +12,6 @@ function SignUp({ navigation, route }) {
     const toast = useRef(null)
 
     return (
-        // <View style={{ flex: 1 }}>
         <View style={{ flex: 1 }}>
             <Toast ref={toast} />
             <LinearGradient colors={['#c2e8f2', '#87ddf5', '#87ddf5', '#c2e8f2']} style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#94b8f2', padding: 20, paddingTop: 20 }}>
