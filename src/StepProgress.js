@@ -26,29 +26,29 @@ function StepProgress({ navigation, route }) {
     ])
 
     const forceUpdate = React.useReducer(bool => !bool)[1];
-    
+
     const validate = () => {
         let arrayCheck = arrayPertanyaan.filter((val) => val.jawab == '')
         if (arrayCheck.length > 0) {
-            toast.current.show(' Semua pertanyaan harus dijawab', {type: 'danger', position: "top"})
+            toast.current.show(' Semua pertanyaan harus dijawab', { type: 'danger', position: "top" })
         } else {
-            navigation.navigate('StepProgress2', {data: arrayPertanyaan})
+            navigation.navigate('StepProgress2', { data: arrayPertanyaan })
         }
     }
 
-    const handleNext = () => { 
+    const handleNext = () => {
         let idxKosong = arrayPertanyaan.findIndex((val) => val.jawab === '')
         if (idxKosong > -1) {
             Alert.alert("Wajib mengisi semua pertanyaan")
         } else {
             props.changePosition(1)
         }
-            
+
     }
 
     return (
         <View style={{ flex: 1 }}>
-            <StatusBar backgroundColor={'rgb(250, 202, 220)'}/>
+            <StatusBar backgroundColor={'rgb(250, 202, 220)'} />
             <Toast ref={toast} />
             <LinearGradient colors={['rgb(250, 202, 220)', '#fff', '#fff', '#fff']} style={{ alignItems: 'center', flex: 1, justifyContent: 'center', backgroundColor: '#94b8f2', padding: 20, paddingTop: 20 }}>
                 <View style={{ flex: 1, paddingTop: 20 }}>
@@ -59,7 +59,7 @@ function StepProgress({ navigation, route }) {
                     // labels={labels}
                     />
                     <Text style={{ fontSize: 16, fontWeight: 'bold', textAlign: 'center', marginTop: 10 }}>Jawab Pertanyaan Berikut</Text>
-                    <Text style={{ fontSize: 16, fontWeight: 'bold', textAlign: 'center', marginTop: 0}}>Sesuai Dengan Kondisi Bunda</Text>
+                    <Text style={{ fontSize: 16, fontWeight: 'bold', textAlign: 'center', marginTop: 0 }}>Sesuai Dengan Kondisi Bunda</Text>
                     <View style={{ borderBottomColor: 'gray', borderBottomWidth: 2, marginTop: 10 }} />
                     <ScrollView style={{ flex: 1, marginTop: 10 }} showsVerticalScrollIndicator={false}>
                         {arrayPertanyaan && arrayPertanyaan.map((item, index) => {
@@ -79,29 +79,31 @@ function StepProgress({ navigation, route }) {
                                                 {item.pertanyaan}
                                             </Text>
                                             <View style={{ marginTop: 10 }}>
-                                                <View style={{ flexDirection: 'row' }}>
+                                                <TouchableOpacity style={{ flexDirection: 'row' }}
+                                                    onPress={() => {
+                                                        arrayPertanyaan[index].jawab = '1'
+                                                        forceUpdate()
+                                                    }}>
                                                     <Radio
                                                         color={"rgb(250, 202, 220)"}
-                                                        onPress={() => {
-                                                            arrayPertanyaan[index].jawab = '1'
-                                                            forceUpdate()
-                                                        }}
+                                                        selectedColor={"rgb(250, 202, 220)"}
                                                         selected={arrayPertanyaan[index].jawab === '1' ? true : false}
                                                     />
                                                     <Text style={{ alignSelf: 'center', marginLeft: 10, fontSize: 13, fontWeight: '800' }}>Ya</Text>
-                                                </View>
-                                                <View style={{ flexDirection: 'row' }}>
+                                                </TouchableOpacity>
+                                                <TouchableOpacity style={{ flexDirection: 'row' }}
+                                                    onPress={() => {
+                                                        arrayPertanyaan[index].jawab = '0'
+                                                        forceUpdate()
+                                                    }}>
                                                     <Radio
                                                         color={"rgb(250, 202, 220)"}
+                                                        selectedColor={"rgb(250, 202, 220)"}
                                                         style={{ marginTop: 5 }}
-                                                        onPress={() => {
-                                                            arrayPertanyaan[index].jawab = '0'
-                                                            forceUpdate()
-                                                        }}
                                                         selected={arrayPertanyaan[index].jawab === '0' ? true : false}
                                                     />
                                                     <Text style={{ alignSelf: 'center', marginLeft: 10, fontSize: 13, fontWeight: '600' }}>Tidak</Text>
-                                                </View>
+                                                </TouchableOpacity>
                                             </View>
                                         </View>
                                     </View>

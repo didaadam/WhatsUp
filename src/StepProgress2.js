@@ -1,6 +1,6 @@
 import { Radio } from 'native-base';
 import React, { useEffect, useRef } from 'react'
-import { View, Text, ScrollView, TouchableOpacity, StatusBar, BackHandler} from 'react-native'
+import { View, Text, ScrollView, TouchableOpacity, StatusBar, BackHandler } from 'react-native'
 import LinearGradient from 'react-native-linear-gradient';
 import FA5 from 'react-native-vector-icons/FontAwesome5'
 import StepIndicator from 'react-native-step-indicator';
@@ -35,10 +35,10 @@ function StepProgress2({ navigation, route }) {
     const validate = () => {
         let arrayCheck = arrayPertanyaan.filter((val) => val.jawab == '')
         if (arrayCheck.length > 0) {
-            toast.current.show(' Semua pertanyaan harus dijawab', {type: 'danger', position: "top"})
+            toast.current.show(' Semua pertanyaan harus dijawab', { type: 'danger', position: "top" })
         } else {
             // alert(JSON.stringify(data))
-            navigation.navigate('StepProgress3', {data: data.concat(arrayPertanyaan)})
+            navigation.navigate('StepProgress3', { data: data.concat(arrayPertanyaan) })
         }
     }
     return (
@@ -73,29 +73,29 @@ function StepProgress2({ navigation, route }) {
                                                 {item.pertanyaan}
                                             </Text>
                                             <View style={{ marginTop: 10 }}>
-                                                <View style={{ flexDirection: 'row' }}>
+                                                <TouchableOpacity style={{ flexDirection: 'row' }}
+                                                    onPress={() => {
+                                                        arrayPertanyaan[index].jawab = '1'
+                                                        forceUpdate()
+                                                    }}>
                                                     <Radio
                                                         color={"#3b5998"}
-                                                        onPress={() => {
-                                                            arrayPertanyaan[index].jawab = '1'
-                                                            forceUpdate()
-                                                        }}
                                                         selected={arrayPertanyaan[index].jawab === '1' ? true : false}
                                                     />
                                                     <Text style={{ alignSelf: 'center', marginLeft: 10, fontSize: 13, fontWeight: '800' }}>Ya</Text>
-                                                </View>
-                                                <View style={{ flexDirection: 'row' }}>
+                                                </TouchableOpacity>
+                                                <TouchableOpacity style={{ flexDirection: 'row' }}
+                                                    onPress={() => {
+                                                        arrayPertanyaan[index].jawab = '0'
+                                                        forceUpdate()
+                                                    }}>
                                                     <Radio
                                                         color={"#3b5998"}
                                                         style={{ marginTop: 5 }}
-                                                        onPress={() => {
-                                                            arrayPertanyaan[index].jawab = '0'
-                                                            forceUpdate()
-                                                        }}
                                                         selected={arrayPertanyaan[index].jawab === '0' ? true : false}
                                                     />
                                                     <Text style={{ alignSelf: 'center', marginLeft: 10, fontSize: 13, fontWeight: '600' }}>Tidak</Text>
-                                                </View>
+                                                </TouchableOpacity>
                                             </View>
                                         </View>
                                     </View>

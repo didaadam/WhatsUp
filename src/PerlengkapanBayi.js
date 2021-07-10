@@ -59,13 +59,10 @@ export default function PerlengkapanBayi({ navigation, route }) {
                             <Text style={{ textAlign: 'center' }}>Sapu tangan & bib</Text>
                         </View>
                     </View>
-                    <View style={{ justifyContent: 'flex-end', paddingBottom: 20 }}>
-                        {/* <Text style={{ marginVertical: 10, textAlign: 'center', color: '#538491', fontWeight: 'bold' }}>
-                            Lihat perlengkapan bayi yang harus dibawa
-                        </Text> */}
-                        <TouchableOpacity onPress={() => navigation.navigate('Login')} style={{ borderRadius: 25, paddingHorizontal: 15, paddingVertical: 10, backgroundColor: '#3b5998', width: '100%', flexDirection: 'row', borderColor: '#3b5998', borderWidth: .3 }}>
+                    <View style={{ justifyContent: 'flex-end' }}>
+                        <TouchableOpacity onPress={() => navigation.navigate('TerimaKasih')} style={{ marginTop: 20, borderRadius: 25, paddingHorizontal: 15, paddingVertical: 10, backgroundColor: '#f781ad', width: '100%', flexDirection: 'row', borderColor: 'gray', borderWidth: .3 }}>
                             <View style={{ justifyContent: 'center', flex: 1, alignItems: 'center' }}>
-                                <Text style={{ fontWeight: '800', color: 'white' }}>Home</Text>
+                                <Text style={{ fontWeight: '800', color: 'white' }}>Selesai</Text>
                             </View>
                             <FA5 name={'angle-double-right'} size={30} color={'white'} />
                         </TouchableOpacity>
