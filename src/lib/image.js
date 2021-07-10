@@ -1,5 +1,27 @@
 const images = { 
-    logoApp: require('./images/logo_pregnant_apps.png')
+    logoApp: require('./images/logo_pregnant_apps.png'),
+    pembalutBersalin: require('./images/pembalut_bersalin.jpeg'),
+    dasterKancing: require('./images/daster_kancing_depan.jpeg'),
+    kainPanjang: require('./images/kain_panjang.jpeg'),
+    bhMenyusui: require('./images/bh_menyusui.jpeg'),
+    gurita: require('./images/gurita.jpeg'),
+    breastpad: require('./images/breastpad.jpeg'),
+    gendongan: require('./images/gendongan.jpeg'),
+    pompaAsi: require('./images/pompa_asi.jpeg'),
+    bajuPanjang: require('./images/bayi_lengan_panjang.jpeg'),
+    bajuPendek: require('./images/bayi_lengan_pendek.jpeg'),
+    jumperPanjang: require('./images/jumper_lengan_panjang_pendek.jpeg'),
+    popokKainClodi: require('./images/popok_kain_clodi.jpeg'),
+    diapersNB: require('./images/diapers_nb.jpeg'),
+    guritaBayi: require('./images/gurita_bayi.jpeg'),
+    bedongBayi: require('./images/bedongan_bayi.jpeg'),
+    sarungTangan: require('./images/sarung_tangan_kaki_bayi.jpeg'),
+    bib: require('./images/sapu_tangan_bib_bayi.jpeg'),
+    peralatanMandi: require('./images/peralatan_mandi.jpeg'),
+    cdBersalin: require('./images/cd_bersalin.jpeg'),
+    sudoCream: require('./images/baby_cream.jpeg'),
+    babyOil: require('./images/baby_oil_lotion_hair_cologne_dll.jpeg'),
+    minyakTelon: require('./images/baby_oil_lotion_hair_cologne_dll.jpeg'),
 }   
 
 export default images

@@ -37,7 +37,7 @@ function Result({ navigation, route }) {
         setTotalScore(total)
         if (total >= 2 && total < 6) {
             setIndex(0)
-        } else if ( total >= 6 && total < 12) {
+        } else if (total >= 6 && total < 12) {
             setIndex(1)
         } else {
             setIndex(2)
@@ -60,13 +60,28 @@ function Result({ navigation, route }) {
                     <Text>
                         Ket: {dataResult[index].ket}
                     </Text>
-                    <Image source={images.logoApp} style={{ width: 175, height: 175, borderRadius: 175 }} />
+                    <Image source={images.logoApp} style={{ width: 175, height: 175, borderRadius: 175, marginTop: 10 }} />
                 </View>
-                <View style={{ height: '40%', width: '100%', alignItems: 'center', paddingTop: 60 }}>
-                    <Text style={{ marginTop: 10, textAlign: 'center', color: '#538491' }}>
-                        Congrats bunda, kamu gajadi remed 🤍
-                    </Text>
+                <View style={{ height: '40%', width: '100%', alignItems: 'center', paddingTop: 50 }}>
+
                     <View style={{ justifyContent: 'flex-end', flex: 1, paddingBottom: 20 }}>
+                        <Text style={{ marginVertical: 10, textAlign: 'center', color: '#538491', fontWeight: 'bold' }}>
+                            Lihat perlengkapan ibu yang harus dibawa
+                        </Text>
+                        <TouchableOpacity
+                            onPress={() => {
+                                if (index === 0) {
+                                    navigation.navigate('Perlengkapan', { params: index })
+                                } else {
+                                    navigation.navigate('Perlengkapan1', { params: index })
+                                }
+                            }}
+                            style={{ borderRadius: 25, paddingHorizontal: 15, paddingVertical: 10, backgroundColor: '#3b5998', width: '100%', flexDirection: 'row', borderColor: '#3b5998', borderWidth: .3 }}>
+                            <View style={{ justifyContent: 'center', flex: 1, alignItems: 'center' }}>
+                                <Text style={{ fontWeight: '800', color: 'white' }}>Selanjutnya</Text>
+                            </View>
+                            <FA5 name={'angle-double-right'} size={30} color={'white'} />
+                        </TouchableOpacity>
                         <Text style={{ marginTop: 10, textAlign: 'center', color: '#538491' }}>
                             - STIKes Abdi Nusantara Jakarta -
                         </Text>

@@ -11,6 +11,9 @@ import StepProgress2 from './src/StepProgress2'
 import StepProgress3 from './src/StepProgress3'
 import Result from './src/Result'
 import Stepper from './src/Stepper'
+import Perlengkapan from './src/Perlengkapan'
+import PerlengkapanBayi from './src/PerlengkapanBayi'
+import Perlengkapan1 from './src/Perlengkapan1'
 
 const Stack = createStackNavigator();
 
@@ -27,6 +30,10 @@ function App() {
                 <Stack.Screen name="StepProgress2" component={StepProgress2} options={({ navigation, route }) => ({ headerShown: false })} />
                 <Stack.Screen name="StepProgress3" component={StepProgress3} options={({ navigation, route }) => ({ headerShown: false })} />
                 <Stack.Screen name="Result" component={Result} options={({ navigation, route }) => ({ headerShown: false })} />
+                <Stack.Screen name="Perlengkapan" component={Perlengkapan} options={({ navigation, route }) => ({ headerShown: false })} />
+                <Stack.Screen name="Perlengkapan1" component={Perlengkapan1} options={({ navigation, route }) => ({ headerShown: false })} />
+                <Stack.Screen name="PerlengkapanBayi" component={PerlengkapanBayi} options={({ navigation, route }) => ({ headerShown: false })} />
+                <Stack.Screen name="PerlengkapanBayi1" component={PerlengkapanBayi} options={({ navigation, route }) => ({ headerShown: false })} />
             </Stack.Navigator>
         </NavigationContainer>
     );
