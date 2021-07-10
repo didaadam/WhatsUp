@@ -1,6 +1,6 @@
 import { Radio } from 'native-base';
 import React, { useEffect, useRef } from 'react'
-import { View, Text, ScrollView, TouchableOpacity, StatusBar } from 'react-native'
+import { View, Text, ScrollView, TouchableOpacity, StatusBar, BackHandler } from 'react-native'
 import LinearGradient from 'react-native-linear-gradient';
 import FA5 from 'react-native-vector-icons/FontAwesome5'
 import StepIndicator from 'react-native-step-indicator';

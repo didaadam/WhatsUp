@@ -10,6 +10,7 @@ import StepProgress from './src/StepProgress'
 import StepProgress2 from './src/StepProgress2'
 import StepProgress3 from './src/StepProgress3'
 import Result from './src/Result'
+import Stepper from './src/Stepper'
 
 const Stack = createStackNavigator();
 
@@ -21,6 +22,7 @@ function App() {
                 <Stack.Screen name="SignUp" component={SignUp} options={({ navigation, route }) => ({ headerShown: false })} />
                 <Stack.Screen name="Home" component={Home} options={({ navigation, route }) => ({ headerShown: false })} />
                 <Stack.Screen name="Latihan" component={Latihan} options={({ navigation, route }) => ({ headerShown: false })} />
+                <Stack.Screen name="Stepper" component={Stepper} options={({ navigation, route }) => ({ headerShown: false })} />
                 <Stack.Screen name="StepProgress" component={StepProgress} options={({ navigation, route }) => ({ headerShown: false })} />
                 <Stack.Screen name="StepProgress2" component={StepProgress2} options={({ navigation, route }) => ({ headerShown: false })} />
                 <Stack.Screen name="StepProgress3" component={StepProgress3} options={({ navigation, route }) => ({ headerShown: false })} />

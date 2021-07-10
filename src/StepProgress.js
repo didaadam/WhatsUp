@@ -1,6 +1,6 @@
 import { Radio } from 'native-base';
 import React, { useRef } from 'react'
-import { View, Text, ScrollView, TouchableOpacity, StatusBar } from 'react-native'
+import { View, Text, ScrollView, TouchableOpacity, StatusBar, Alert } from 'react-native'
 import LinearGradient from 'react-native-linear-gradient';
 import FA5 from 'react-native-vector-icons/FontAwesome5'
 import StepIndicator from 'react-native-step-indicator';
@@ -34,6 +34,16 @@ function StepProgress({ navigation, route }) {
         } else {
             navigation.navigate('StepProgress2', {data: arrayPertanyaan})
         }
+    }
+
+    const handleNext = () => { 
+        let idxKosong = arrayPertanyaan.findIndex((val) => val.jawab === '')
+        if (idxKosong > -1) {
+            Alert.alert("Wajib mengisi semua pertanyaan")
+        } else {
+            props.changePosition(1)
+        }
+            
     }
 
     return (
