@@ -8,7 +8,6 @@ import StepIndicator from 'react-native-step-indicator';
 function StepProgress2(props) {
     const [currentPosition] = React.useState(1)
     const [arrayPertanyaan, setstate] = React.useState([
-        { jawab: '', pertanyaan: 'Apakah ibu pernah melahirkan dengan operasi caesar?' },
         { jawab: '', pertanyaan: 'Apakah ibu mengalami kurang darah (anemia) ?' },
         { jawab: '', pertanyaan: 'Apakah ibu pernah mengalami penyakit malaria ?' },
         { jawab: '', pertanyaan: 'Apakah ibu punya riwayat penyakit TBC sebelum hamil ?' },

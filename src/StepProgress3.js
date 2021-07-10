@@ -8,6 +8,7 @@ import StepIndicator from 'react-native-step-indicator';
 function StepProgress3(props) {
     const [currentPosition] = React.useState(2)
     const [arrayPertanyaan, setstate] = React.useState([
+        { jawab: '', pertanyaan: 'Apakah ibu pernah melahirkan dengan operasi caesar?' },
         { jawab: '', pertanyaan: 'Apakah ibu pernah melahirkan letak sungsang?' },
         { jawab: '', pertanyaan: 'Apakah ibu pernah mengalami kehamilan lintang?' },
         { jawab: '', pertanyaan: 'Apakah ibu pernah mengalami perdarahan dalam kehamilan ini?' },
@@ -35,7 +36,7 @@ function StepProgress3(props) {
                     <View style={{ flex: 1, flexDirection: 'row', marginTop: index === 0 ? 0 : 10 }} key={index} >
                         <View style={{ width: '15%', justifyContent: 'space-between', height: '100%' }}>
                             <View style={{ borderRadius: 20, height: 30, width: 30, borderColor: '#3b5998', borderWidth: 3, justifyContent: 'center', alignSelf: 'center' }}>
-                                <Text style={{ textAlign: 'center', fontWeight: '800' }}>{index + 25}</Text>
+                                <Text style={{ textAlign: 'center', fontWeight: '800' }}>{index + 24}</Text>
                             </View>
                             <View style={{ borderColor: '#3b5998', borderWidth: 1, width: 2, alignSelf: 'center', height: '65%', marginTop: 5 }}>
 
