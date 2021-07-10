@@ -27,7 +27,8 @@ function Login({ navigation, route }) {
                     <Text style={{ marginTop: 10, textAlign: 'center', color: '#538491' }}>
                         Aplikasi karya mahasiswi Sarjana Kebidanan Angkatan 2019 untuk ibu hamil , Semoga bermanfaat 🤍
                     </Text>
-                    <TouchableOpacity onPress={() => navigation.navigate('Latihan')} style={{ marginTop: 40, borderRadius: 25, paddingHorizontal: 15, paddingVertical: 10, backgroundColor: '#3b5998', width: '100%', flexDirection: 'row', borderColor: '#3b5998', borderWidth: .3 }}>
+                    {/* toast.current.show(' Dah dibilang belum dibikin buset!', { type: 'danger', icon: <FA5 name="head-side-virus" size={25} color={'white'} /> }) */}
+                    <TouchableOpacity onPress={() => navigation.navigate('Stepper')} style={{ marginTop: 40, borderRadius: 25, paddingHorizontal: 15, paddingVertical: 10, backgroundColor: '#3b5998', width: '100%', flexDirection: 'row', borderColor: '#3b5998', borderWidth: .3 }}>
                         <View style={{ justifyContent: 'center', flex: 1, alignItems: 'center'}}>
                             <Text style={{ fontWeight: '800', color: 'white' }}>Selanjutnya</Text>
                         </View>
