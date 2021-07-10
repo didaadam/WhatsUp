@@ -51,11 +51,11 @@ export default function Perlengkapan1({ navigation, route }) {
                             <Text style={{ textAlign: 'center' }}>CD</Text>
                         </View>
                     </View>
-                    <View style={{ justifyContent: 'flex-end', flex: 1, paddingBottom: 20 }}>
+                    <View style={{ justifyContent: 'flex-end' }}>
                         <Text style={{ marginVertical: 10, textAlign: 'center', color: '#538491', fontWeight: 'bold' }}>
                             Lihat perlengkapan bayi yang harus dibawa
                         </Text>
-                        <TouchableOpacity onPress={() => navigation.navigate('PerlengkapanBayi1', { params: index })} style={{ borderRadius: 25, paddingHorizontal: 15, paddingVertical: 10, backgroundColor: '#3b5998', width: '100%', flexDirection: 'row', borderColor: '#3b5998', borderWidth: .3 }}>
+                        <TouchableOpacity onPress={() => navigation.navigate('PerlengkapanBayi1')} style={{ marginTop: 20, borderRadius: 25, paddingHorizontal: 15, paddingVertical: 10, backgroundColor: '#f781ad', width: '100%', flexDirection: 'row', borderColor: 'gray', borderWidth: .3 }}>
                             <View style={{ justifyContent: 'center', flex: 1, alignItems: 'center' }}>
                                 <Text style={{ fontWeight: '800', color: 'white' }}>Selanjutnya</Text>
                             </View>

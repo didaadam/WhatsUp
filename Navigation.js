@@ -14,6 +14,8 @@ import Stepper from './src/Stepper'
 import Perlengkapan from './src/Perlengkapan'
 import PerlengkapanBayi from './src/PerlengkapanBayi'
 import Perlengkapan1 from './src/Perlengkapan1'
+import PerlengkapanBayi1 from './src/PerlengkapanBayi1'
+import TerimaKasih from './src/TerimaKasih,'
 
 const Stack = createStackNavigator();
 
@@ -33,7 +35,8 @@ function App() {
                 <Stack.Screen name="Perlengkapan" component={Perlengkapan} options={({ navigation, route }) => ({ headerShown: false })} />
                 <Stack.Screen name="Perlengkapan1" component={Perlengkapan1} options={({ navigation, route }) => ({ headerShown: false })} />
                 <Stack.Screen name="PerlengkapanBayi" component={PerlengkapanBayi} options={({ navigation, route }) => ({ headerShown: false })} />
-                <Stack.Screen name="PerlengkapanBayi1" component={PerlengkapanBayi} options={({ navigation, route }) => ({ headerShown: false })} />
+                <Stack.Screen name="PerlengkapanBayi1" component={PerlengkapanBayi1} options={({ navigation, route }) => ({ headerShown: false })} />
+                <Stack.Screen name="TerimaKasih" component={TerimaKasih} options={({ navigation, route }) => ({ headerShown: false })} />
             </Stack.Navigator>
         </NavigationContainer>
     );

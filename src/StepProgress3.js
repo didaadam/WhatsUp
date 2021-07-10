@@ -28,12 +28,12 @@ function StepProgress3({ navigation, route }) {
     const validate = () => {
         let arrayCheck = arrayPertanyaan.filter((val) => val.jawab == '')
         if (arrayCheck.length > 0) {
-            toast.current.show(' Semua pertanyaan harus dijawab', {type: 'danger', position: "top"})
+            toast.current.show(' Semua pertanyaan harus dijawab', { type: 'danger', position: "top" })
         } else {
-            navigation.navigate('Result', {data: data.concat(arrayPertanyaan)})
+            navigation.navigate('Result', { data: data.concat(arrayPertanyaan) })
         }
     }
-    
+
     return (
         <View style={{ flex: 1 }}>
             <Toast ref={toast} />
@@ -66,29 +66,29 @@ function StepProgress3({ navigation, route }) {
                                                 {item.pertanyaan}
                                             </Text>
                                             <View style={{ marginTop: 10 }}>
-                                                <View style={{ flexDirection: 'row' }}>
+                                                <TouchableOpacity style={{ flexDirection: 'row' }}
+                                                    onPress={() => {
+                                                        arrayPertanyaan[index].jawab = '1'
+                                                        forceUpdate()
+                                                    }}>
                                                     <Radio
                                                         color={"#3b5998"}
-                                                        onPress={() => {
-                                                            arrayPertanyaan[index].jawab = '1'
-                                                            forceUpdate()
-                                                        }}
                                                         selected={arrayPertanyaan[index].jawab === '1' ? true : false}
                                                     />
                                                     <Text style={{ alignSelf: 'center', marginLeft: 10, fontSize: 13, fontWeight: '800' }}>Ya</Text>
-                                                </View>
-                                                <View style={{ flexDirection: 'row' }}>
+                                                </TouchableOpacity>
+                                                <TouchableOpacity style={{ flexDirection: 'row' }}
+                                                    onPress={() => {
+                                                        arrayPertanyaan[index].jawab = '0'
+                                                        forceUpdate()
+                                                    }}>
                                                     <Radio
                                                         color={"#3b5998"}
                                                         style={{ marginTop: 5 }}
-                                                        onPress={() => {
-                                                            arrayPertanyaan[index].jawab = '0'
-                                                            forceUpdate()
-                                                        }}
                                                         selected={arrayPertanyaan[index].jawab === '0' ? true : false}
                                                     />
                                                     <Text style={{ alignSelf: 'center', marginLeft: 10, fontSize: 13, fontWeight: '600' }}>Tidak</Text>
-                                                </View>
+                                                </TouchableOpacity>
                                             </View>
                                         </View>
                                     </View>
@@ -97,13 +97,13 @@ function StepProgress3({ navigation, route }) {
                         })}
                     </ScrollView>
                     <TouchableOpacity onPress={() => validate()} style={{ marginTop: 20, borderRadius: 25, paddingHorizontal: 15, paddingVertical: 10, backgroundColor: '#3b5998', width: '100%', flexDirection: 'row', borderColor: '#3b5998', borderWidth: .3 }}>
-                            <View style={{ justifyContent: 'center', flex: 1, alignItems: 'center' }}>
-                                <Text style={{ fontWeight: '800', color: 'white' }}>Hasil</Text>
-                            </View>
-                            {/* <View style={{ paddingHorizontal: 7, paddingVertical: 7, backgroundColor: 'transparent', borderRadius: 50, justifyContent: 'center' }}> */}
-                            <FA5 name={'angle-double-right'} size={30} color={'white'} />
-                            {/* </View> */}
-                        </TouchableOpacity>
+                        <View style={{ justifyContent: 'center', flex: 1, alignItems: 'center' }}>
+                            <Text style={{ fontWeight: '800', color: 'white' }}>Hasil</Text>
+                        </View>
+                        {/* <View style={{ paddingHorizontal: 7, paddingVertical: 7, backgroundColor: 'transparent', borderRadius: 50, justifyContent: 'center' }}> */}
+                        <FA5 name={'angle-double-right'} size={30} color={'white'} />
+                        {/* </View> */}
+                    </TouchableOpacity>
                 </View>
             </LinearGradient>
         </View>
