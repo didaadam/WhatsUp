@@ -85,6 +85,10 @@ function StepProgress({ navigation, route }) {
                                                         forceUpdate()
                                                     }}>
                                                     <Radio
+                                                        onPress={() => {
+                                                            arrayPertanyaan[index].jawab = '1'
+                                                            forceUpdate()
+                                                        }}
                                                         color={"rgb(250, 202, 220)"}
                                                         selectedColor={"rgb(250, 202, 220)"}
                                                         selected={arrayPertanyaan[index].jawab === '1' ? true : false}
@@ -97,6 +101,10 @@ function StepProgress({ navigation, route }) {
                                                         forceUpdate()
                                                     }}>
                                                     <Radio
+                                                        onPress={() => {
+                                                            arrayPertanyaan[index].jawab = '0'
+                                                            forceUpdate()
+                                                        }}
                                                         color={"rgb(250, 202, 220)"}
                                                         selectedColor={"rgb(250, 202, 220)"}
                                                         style={{ marginTop: 5 }}
