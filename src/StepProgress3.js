@@ -72,6 +72,10 @@ function StepProgress3({ navigation, route }) {
                                                         forceUpdate()
                                                     }}>
                                                     <Radio
+                                                        onPress={() => {
+                                                            arrayPertanyaan[index].jawab = '1'
+                                                            forceUpdate()
+                                                        }}
                                                         color={"#3b5998"}
                                                         selected={arrayPertanyaan[index].jawab === '1' ? true : false}
                                                     />
@@ -83,6 +87,10 @@ function StepProgress3({ navigation, route }) {
                                                         forceUpdate()
                                                     }}>
                                                     <Radio
+                                                        onPress={() => {
+                                                            arrayPertanyaan[index].jawab = '0'
+                                                            forceUpdate()
+                                                        }}
                                                         color={"#3b5998"}
                                                         style={{ marginTop: 5 }}
                                                         selected={arrayPertanyaan[index].jawab === '0' ? true : false}
