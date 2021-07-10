@@ -90,7 +90,7 @@ function StepProgress({ navigation, route }) {
                                                             forceUpdate()
                                                         }}
                                                         color={"rgb(250, 202, 220)"}
-                                                        selectedColor={"rgb(250, 202, 220)"}
+                                                        selectedColor={"rgb(252, 182, 208)"}
                                                         selected={arrayPertanyaan[index].jawab === '1' ? true : false}
                                                     />
                                                     <Text style={{ alignSelf: 'center', marginLeft: 10, fontSize: 13, fontWeight: '800' }}>Ya</Text>
@@ -106,7 +106,7 @@ function StepProgress({ navigation, route }) {
                                                             forceUpdate()
                                                         }}
                                                         color={"rgb(250, 202, 220)"}
-                                                        selectedColor={"rgb(250, 202, 220)"}
+                                                        selectedColor={"rgb(252, 182, 208)"}
                                                         style={{ marginTop: 5 }}
                                                         selected={arrayPertanyaan[index].jawab === '0' ? true : false}
                                                     />

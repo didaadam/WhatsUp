@@ -5,7 +5,9 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import FA5 from 'react-native-vector-icons/FontAwesome5'
 import Toast from "react-native-fast-toast";
 import images from './lib/image'
-import { FloatingLabelInput } from 'react-native-floating-label-input'; 
+import { FloatingLabelInput } from 'react-native-floating-label-input';
+import firebase from './firebase/config'
+import RNFetchBlob from 'react-native-fetch-blob';
 
 const Height = Dimensions.get('screen').height
 const Width = Dimensions.get('screen').width
@@ -40,7 +42,7 @@ function Latihan({ navigation, route }) {
                 setKeyboardVisible(false); // or some other action
             }
         );
-
+            
         return () => {
             keyboardDidHideListener.remove();
             keyboardDidShowListener.remove();
@@ -64,6 +66,66 @@ function Latihan({ navigation, route }) {
         } else {
             navigation.navigate('StepProgress')
         }
+    }
+
+    const cobadonlot = () => {
+
+        const values = [
+            ['build', '2017-11-05T05:40:35.515Z'],
+            ['deploy', '2017-11-05T05:42:04.810Z']
+        ];
+
+        // construct csvString
+        const headerString = 'event,timestamp\n';
+        const rowString = values.map(d => `${d[0]},${d[1]}\n`).join('');
+        const csvString = `${headerString}${rowString}`;
+
+        // write the current list of answers to a local csv file
+        const pathToWrite = `${RNFetchBlob.fs.dirs.DownloadDir}/data.csv`;
+        console.log('pathToWrite', pathToWrite);
+        // pathToWrite /storage/emulated/0/Download/data.csv
+        RNFetchBlob.fs
+            .writeFile(pathToWrite, csvString, 'utf8')
+            .then(() => {
+                console.log(`wrote file ${pathToWrite}`);
+                // wrote file /storage/emulated/0/Download/data.csv
+            })
+            .catch(error => console.error(error));
+    }
+
+    const getRestaurants = async () => {
+        try {
+            const list = [];
+            var snapshot = await firebase.firestore().collection('askeb').get()
+            //   firestore().collection("Restaurants").get();
+            console.log(snapshot)
+            console.log("Here");
+            let array = []
+            snapshot.forEach((doc) => {
+                array.push(doc._data)
+                // list.push(doc.data());
+            });
+            console.log(array)
+            //   setRestaurantsList(list);
+        } catch (e) {
+            console.log(e)
+            //   setErrorMessage(
+            //     "There's nae bleeding restaurants, I told you to upload them!"
+            //   );
+        }
+    };
+
+
+    const tambahData = () => {
+        firebase.firestore()
+            .collection('askeb')
+            .add({
+                name: 'test yosssss',
+                age: 28,
+            })
+            .then(() => {
+                console.log('User added!');
+            });
     }
 
     return (
