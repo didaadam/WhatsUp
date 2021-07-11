@@ -9,7 +9,7 @@ export default function TerimaKasih({ navigation, route }) {
         <View style={{ flex: 1 }}>
             <StatusBar backgroundColor={'#c2e8f2'} />
             <LinearGradient colors={['#c2e8f2', 'rgb(250, 202, 220)', 'rgb(250, 202, 220)', '#c2e8f2']} style={{ alignItems: 'center', flex: 1, backgroundColor: '#94b8f2', padding: 20, paddingTop: 20 }}>
-                <View style={{ elevation: 10, margin: 10, backgroundColor: 'transparent', borderRadius: 175, marginTop: '60%' }}>
+                <View style={{ elevation: 10, margin: 10, backgroundColor: 'transparent', borderRadius: 175, marginTop: '50%' }}>
                     <Image source={images.logoApp} style={{ width: 175, height: 175, borderRadius: 175, }} />
                 </View>
                 <View style={{ borderBottomColor: 'rgb(250, 202, 220)', borderBottomWidth: 3, width: '50%' }}></View>
