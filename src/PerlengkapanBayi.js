@@ -14,7 +14,7 @@ export default function PerlengkapanBayi({ navigation, route }) {
     return (
         <View style={{ flex: 1 }}> 
             <View style={{ alignItems: 'center', flex: 1, justifyContent: 'center' }}>
-                <Text style={{ fontSize: 16, color: '#538491', textAlign: 'center', marginVertical: 20 }}>Perlengkapan melahirkan untuk bayi ke polindes</Text>
+                <Text style={{ fontSize: 16, color: '#538491', textAlign: 'center', marginVertical: 20 }}>Perlengkapan melahirkan untuk {<Text style={{fontWeight: 'bold', fontSize: 16}}>Bayi</Text>} ke Polindes</Text>
                 <View style={{ flex: 1, justifyContent: 'space-around' }}>
                     <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                         <View style={{ width: '33%' }}>

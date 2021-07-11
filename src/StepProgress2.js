@@ -11,17 +11,17 @@ function StepProgress2({ navigation, route }) {
     const [currentPosition] = React.useState(1)
     const data = route.params.data
     const [arrayPertanyaan, setstate] = React.useState([
-        { jawab: '', pertanyaan: 'Apakah ibu mengalami kurang darah (anemia) ?', score: 4 },
-        { jawab: '', pertanyaan: 'Apakah ibu pernah mengalami penyakit malaria ?', score: 4 },
-        { jawab: '', pertanyaan: 'Apakah ibu punya riwayat penyakit TBC sebelum hamil ?', score: 4 },
-        { jawab: '', pertanyaan: 'Apakah ibu/keluarga memiliki riwayat penyakit jantung atau sesak berkepanjangan?', score: 4 },
-        { jawab: '', pertanyaan: 'Apakah ibu memiliki riwayat penyakit diabetes melitus (kencing manis) ?', score: 4 },
-        { jawab: '', pertanyaan: 'Apakah ibu ada penyakit menular seksual ?', score: 4 },
-        { jawab: '', pertanyaan: 'Apakah ibu selama kehamilan pernah terjadi pembengkakan pada muka atau tungkai?', score: 4 },
-        { jawab: '', pertanyaan: 'Apakah ibu pernah mempunyai keturunan kembar ?', score: 4 },
-        { jawab: '', pertanyaan: 'Apakah ibu pernah mengalami bayi lahir prematur (hydramnion) ?', score: 4 },
-        { jawab: '', pertanyaan: 'Apakah ibu sebelumnya pernah mengalami kematian janin dalam kandungan ?', score: 4 },
-        { jawab: '', pertanyaan: 'Apakah ibu pernah hamil lebih bulan ?', score: 4 },
+        { jawab: '', pertanyaan: 'Apakah ibu mengalami kurang darah (anemia) ?', score: 4, jawabanYa: 'Ibu mengalami kurang darah (anemia)' },
+        { jawab: '', pertanyaan: 'Apakah ibu pernah mengalami penyakit malaria ?', score: 4, jawabanYa: 'Ibu pernah mengalami penyakit malaria' },
+        { jawab: '', pertanyaan: 'Apakah ibu punya riwayat penyakit TBC sebelum hamil ?', score: 4, jawabanYa: 'Ibu punya riwayat penyakit TBC sebelum hamil' },
+        { jawab: '', pertanyaan: 'Apakah ibu/keluarga memiliki riwayat penyakit jantung atau sesak berkepanjangan?', score: 4, jawabanYa: 'Ibu/keluarga memiliki riwayat penyakit jantung atau sesak berkepanjangan' },
+        { jawab: '', pertanyaan: 'Apakah ibu memiliki riwayat penyakit diabetes melitus (kencing manis) ?', score: 4, jawabanYa: 'Ibu memiliki riwayat penyakit diabetes melitus (kencing manis)' },
+        { jawab: '', pertanyaan: 'Apakah ibu ada penyakit menular seksual ?', score: 4, jawabanYa: 'Ibu ada penyakit menular seksual' },
+        { jawab: '', pertanyaan: 'Apakah ibu selama kehamilan pernah terjadi pembengkakan pada muka atau tungkai?', score: 4, jawabanYa: 'Ibu selama kehamilan pernah terjadi pembengkakan pada muka atau tungkai' },
+        { jawab: '', pertanyaan: 'Apakah ibu pernah mempunyai keturunan kembar ?', score: 4, jawabanYa: 'Ibu pernah mempunyai keturunan kembar' },
+        { jawab: '', pertanyaan: 'Apakah ibu pernah mengalami bayi lahir prematur (hydramnion) ?', score: 4, jawabanYa: 'Ibu pernah mengalami bayi lahir prematur (hydramnion)' },
+        { jawab: '', pertanyaan: 'Apakah ibu sebelumnya pernah mengalami kematian janin dalam kandungan ?', score: 4, jawabanYa: 'Ibu sebelumnya pernah mengalami kematian janin dalam kandungan' },
+        { jawab: '', pertanyaan: 'Apakah ibu pernah hamil lebih bulan ?', score: 4, jawabanYa: 'Ibu pernah hamil lebih bulan' },
     ])
 
     const forceUpdate = React.useReducer(bool => !bool)[1];

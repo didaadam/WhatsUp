@@ -1,20 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { View, StatusBar, Image, Text, TouchableOpacity, ScrollView } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import FA5 from 'react-native-vector-icons/FontAwesome5'
 import images from './lib/image';
 
-export default function PerlengkapanBayi1({ navigation, route }) {
-    const index = React.useState(0)
-
+export default function PerlengkapanBayi1(props) {
+    const [index, setIndex] = useState(0)
     React.useEffect(() => {
-        console.log(route);
+        // console.log(props.index);
+        // alert(props)
+        setIndex(props.index)
     }, [])
 
     return (
         <View style={{ flex: 1 }}>
             <View style={{ alignItems: 'center', flex: 1, justifyContent: 'center' }}>
-                <Text style={{ fontSize: 16, textAlign: 'center', color: '#538491', marginVertical: 20 }}>Perlengkapan melahirkan untuk bayi ke RS</Text>
+                <Text style={{ fontSize: 16, textAlign: 'center', color: '#538491', marginVertical: 20 }}>Perlengkapan melahirkan untuk {<Text style={{fontWeight: 'bold', fontSize: 16}}>Bayi</Text>} ke {index == 1? 'Polindes/RS' : 'RS'}</Text>
                 <View style={{ flex: 1, justifyContent: 'space-around' }}>
                     <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                         <View style={{ width: '33%' }}>
