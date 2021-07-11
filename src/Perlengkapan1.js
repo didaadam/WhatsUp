@@ -30,7 +30,7 @@ export default function Perlengkapan1({ navigation, route }) {
                             <Text style={{ textAlign: 'center', color: '#538491' }}>Kain panjang</Text>
                         </View>
                     </View>
-                    <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                    <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 10 }}>
                         <View style={{ width: '33%' }}>
                             <Image source={images.bhMenyusui} style={{ width: 100, height: 100, borderRadius: 175 }} />
                             <Text style={{ textAlign: 'center', color: '#538491' }}>BH menyusui</Text>
@@ -44,7 +44,7 @@ export default function Perlengkapan1({ navigation, route }) {
                             <Text style={{ textAlign: 'center', color: '#538491' }}>Peralatan mandi</Text>
                         </View>
                     </View>
-                    <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
+                    <View style={{ flexDirection: 'row', justifyContent: 'space-around', marginTop: 10 }}>
                         <View style={{ width: '33%' }}>
                             <Image source={images.cdBersalin} style={{ width: 100, height: 100, borderRadius: 175 }} />
                             <Text style={{ textAlign: 'center', color: '#538491' }}>CD</Text>

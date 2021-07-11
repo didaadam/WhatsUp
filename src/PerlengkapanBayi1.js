@@ -30,7 +30,7 @@ export default function PerlengkapanBayi1({ navigation, route }) {
                             <Text style={{ textAlign: 'center', color: '#538491' }}>Jumper lengan panjang jumper lengan pendek</Text>
                         </View>
                     </View>
-                    <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                    <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 10 }}>
                         <View style={{ width: '33%' }}>
                             <Image source={images.popokKainClodi} style={{ width: 100, height: 100, borderRadius: 175 }} />
                             <Text style={{ textAlign: 'center', color: '#538491' }}>Popok kain + clodi</Text>
@@ -44,7 +44,7 @@ export default function PerlengkapanBayi1({ navigation, route }) {
                             <Text style={{ textAlign: 'center', color: '#538491' }}>Gurita bayi</Text>
                         </View>
                     </View>
-                    <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                    <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 10 }}>
                         <View style={{ width: '33%' }}>
                             <Image source={images.bedongBayi} style={{ width: 100, height: 100, borderRadius: 175 }} />
                             <Text style={{ textAlign: 'center', color: '#538491' }}>Bedong bayi</Text>
@@ -58,7 +58,7 @@ export default function PerlengkapanBayi1({ navigation, route }) {
                             <Text style={{ textAlign: 'center', color: '#538491' }}>Sapu tangan & bib</Text>
                         </View>
                     </View>
-                    <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                    <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 10 }}>
                         <View style={{ width: '33%' }}>
                             <Image source={images.sudoCream} style={{ width: 100, height: 100, borderRadius: 175 }} />
                             <Text style={{ textAlign: 'center', color: '#538491' }}>Sudocream Baby cream</Text>
