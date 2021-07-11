@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { View, Text, TouchableOpacity, Dimensions, Image, TextInput, ScrollView, Keyboard, StatusBar } from 'react-native'
+import { View, Text, TouchableOpacity, Dimensions, Image, TextInput, ScrollView, Keyboard, StatusBar, Modal } from 'react-native'
 import LinearGradient from 'react-native-linear-gradient'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import FA5 from 'react-native-vector-icons/FontAwesome5'
@@ -28,6 +28,7 @@ function Latihan({ navigation, route }) {
     const ref_input4 = useRef();
     const ref_input5 = useRef();
     const ref_input6 = useRef();
+    const [modalVisible, setModalVisible] = useState(false);
 
     useEffect(() => {
         const keyboardDidShowListener = Keyboard.addListener(
@@ -64,7 +65,7 @@ function Latihan({ navigation, route }) {
         } else if (noHp === "") {
             toast.current.show('Nomor telepon wajib diisi', { type: 'danger', position: "top" })
         } else {
-            navigation.navigate('StepProgress')
+            setModalVisible(true)
         }
     }
 
@@ -133,6 +134,36 @@ function Latihan({ navigation, route }) {
             <StatusBar backgroundColor={'#fff'} />
             <Toast ref={toast} />
             <LinearGradient colors={['#fff', '#fff', '#fff', '#fff']} style={{ flex: 1, alignItems: 'center', backgroundColor: '#94b8f2', padding: 20, paddingTop: 20, }}>
+            <Modal
+                    animationType="slide"
+                    transparent={true}
+                    visible={modalVisible}
+                    onRequestClose={() => {
+                        // Alert.alert("Modal has been closed.");
+                        setModalVisible(!modalVisible);
+                    }}
+                >
+                    <View style={{ alignItems: 'center', justifyContent: 'center', flex: 1, backgroundColor: 'rgba(0,0,0,.6)' }}>
+                        <View style={{ backgroundColor: 'white', width: '80%', borderRadius: 10 }}>
+                            <View style={{ height: 50, width: '100%', backgroundColor: 'rgba(250, 202, 220, .4)', alignItems: 'center', justifyContent: 'center', borderTopRightRadius: 10, borderTopLeftRadius: 10 }}>
+                                <Text style={{ fontSize: 16, fontWeight: 'bold' }}>Perhatian</Text>
+                            </View>
+                            <View style={{ padding: 10 }}>
+                                <View style={{ alignItems: 'center', justifyContent: 'center' }}>
+                                    {/* <View style={{ borderBottomColor: '#c2e8f2', borderBottomWidth: 3, width: '100%', marginVertical: 5 }}></View> */}
+                                    <Text>Score Awal Bunda adalah 2</Text>
+                                </View>
+                                <View style={{ alignItems: 'center', marginTop: 20, marginBottom: 5 }}>
+                                    <TouchableOpacity onPress={() => navigation.navigate('StepProgress')} style={{ borderRadius: 25, paddingHorizontal: 15, paddingVertical: 10, backgroundColor: '#f781ad', width: '100%', flexDirection: 'row', borderColor: '#3b5998', borderWidth: .3 }}>
+                                        <View style={{ justifyContent: 'center', flex: 1, alignItems: 'center' }}>
+                                            <Text style={{ fontWeight: '800', color: 'white' }}>Okay</Text>
+                                        </View>
+                                    </TouchableOpacity>
+                                </View>
+                            </View>
+                        </View>
+                    </View>
+                </Modal>
                 <Text style={{ textAlign: 'center', fontSize: 24, marginTop: 25 }}>Profile Bunda</Text>
                 <View style={{ backgroundColor: 'transparent', width: '100%', height: '50%', margin: 5, borderRadius: 5, padding: 5, flex: 1, marginTop: 40 }}>
                     <ScrollView showsVerticalScrollIndicator={false}>

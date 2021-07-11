@@ -11,10 +11,10 @@ function StepProgress3({ navigation, route }) {
     const [currentPosition] = React.useState(2)
     const data = route.params.data
     const [arrayPertanyaan, setstate] = React.useState([
-        { jawab: '', pertanyaan: 'Apakah ibu pernah melahirkan letak sungsang?', score: 8 },
-        { jawab: '', pertanyaan: 'Apakah ibu pernah mengalami kehamilan lintang?', score: 8 },
-        { jawab: '', pertanyaan: 'Apakah ibu pernah mengalami perdarahan dalam kehamilan ini?', score: 8 },
-        { jawab: '', pertanyaan: 'Apakah ibu selama hamil pernah mengalami pre-eclampsia kejang-kejang?', score: 8 }
+        { jawab: '', pertanyaan: 'Apakah ibu pernah melahirkan letak sungsang?', score: 8, jawabanYa: 'Ibu pernah melahirkan letak sungsang' },
+        { jawab: '', pertanyaan: 'Apakah ibu pernah mengalami kehamilan lintang?', score: 8, jawabanYa: 'Ibu pernah mengalami kehamilan lintang' },
+        { jawab: '', pertanyaan: 'Apakah ibu pernah mengalami perdarahan dalam kehamilan ini?', score: 8, jawabanYa: 'Ibu pernah mengalami perdarahan dalam kehamilan ini' },
+        { jawab: '', pertanyaan: 'Apakah ibu selama hamil pernah mengalami pre-eclampsia kejang-kejang?', score: 8, jawabanYa: 'Ibu selama hamil pernah mengalami pre-eclampsia kejang-kejang' }
     ])
 
     useEffect(() => {

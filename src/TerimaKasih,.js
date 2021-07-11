@@ -3,6 +3,7 @@ import { Image, StatusBar, Text, TouchableOpacity, View } from 'react-native'
 import LinearGradient from 'react-native-linear-gradient'
 import images from './lib/image'
 import FA5 from 'react-native-vector-icons/FontAwesome5'
+import { StackActions } from '@react-navigation/native';
 
 export default function TerimaKasih({ navigation, route }) {
     return (
@@ -16,11 +17,11 @@ export default function TerimaKasih({ navigation, route }) {
                 <View style={{ marginTop: 10 }}>
                     <Text style={{ color: '#538491', fontWeight: 'bold', fontSize: 24 }}>TERIMA KASIH</Text>
                 </View>
-                <Text style={{ color: '#538491', fontWeight: 'bold', textAlign: 'center', fontSize: 20 }}>Telah menggunakan aplikasi dan motivasi</Text>
-                <Text style={{ color: '#538491', fontWeight: 'bold', fontSize: 24 }}>Happy Baby Happy Mom</Text>
+                <Text style={{ color: '#538491', fontWeight: 'bold', textAlign: 'center', fontSize: 20 }}>Telah Menggunakan Aplikasi Ini dan Semoga Bermanfaat Untuk Bunda</Text>
+                <Text style={{ color: '#538491', fontWeight: 'bold', fontSize: 24, marginTop: 75}}>Happy Baby Happy Mom</Text>
                 <View style={{ justifyContent: 'flex-end', flex: 1, paddingBottom: 20 }}>
                     <TouchableOpacity 
-                        onPress={() => navigation.navigate('Login')}
+                        onPress={() => navigation.dispatch(StackActions.popToTop())}
                         style={{ borderRadius: 25, paddingHorizontal: 15, paddingVertical: 10, backgroundColor: '#3b5998', width: '100%', flexDirection: 'row', borderColor: '#3b5998', borderWidth: .3 }}>
                         <View style={{ justifyContent: 'center', flex: 1, alignItems: 'center' }}>
                             <Text style={{ fontWeight: '800', color: 'white' }}>Home</Text>

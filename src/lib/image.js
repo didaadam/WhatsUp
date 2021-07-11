@@ -22,6 +22,11 @@ const images = {
     sudoCream: require('./images/baby_cream.jpeg'),
     babyOil: require('./images/baby_oil_lotion_hair_cologne_dll.jpeg'),
     minyakTelon: require('./images/baby_oil_lotion_hair_cologne_dll.jpeg'),
+    polindes: require('./images/Polindes.png'),
+    bidan: require('./images/bidan.png'),
+    rumahSakit: require('./images/rumahsakit.png'),
+    dokter: require('./images/dokter.png'),
+    puskesmas: require('./images/puskesmas.png'),
 }   
 
 export default images
