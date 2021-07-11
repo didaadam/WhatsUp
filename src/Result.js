@@ -19,9 +19,9 @@ function Result({ navigation, route }) {
     const [index, setIndex] = useState(0);
     const [totalScore, setTotalScore] = useState(null);
     const [dataResult, setDataResult] = useState([
-        { level: 0, ket: 'Status kehamilan resiko rendah, perawatan dengan bidan, tidak perlu dirujuk, bertempat di polindes, dan ditolong oleh bidan.' },
-        { level: 1, ket: 'Status kehamilan resiko tinggi, perawatan dengan bidan dan dokter, perlu dirujuk ke puskesmas/RS, bertempat di puskesmas/RS, ditolong oleh bidan dan dokter.' },
-        { level: 2, ket: 'Status kehamilan resiko sangat tinggi, perawatan dengan dokter, perlu dirujuk ke RS, bertempat di RS, ditolong oleh dokter.' },
+        { level: 0, ket: 'Perawatan dengan bidan, tidak perlu dirujuk, bertempat di polindes, dan ditolong oleh bidan.', status: 'Status kehamilan resiko rendah' },
+        { level: 1, ket: 'Perawatan dengan bidan dan dokter, perlu dirujuk ke puskesmas/RS, bertempat di puskesmas/RS, ditolong oleh bidan dan dokter.', status: 'Status kehamilan resiko tinggi' },
+        { level: 2, ket: 'Perawatan dengan dokter, perlu dirujuk ke RS, bertempat di RS, ditolong oleh dokter.', status: 'Status kehamilan resiko sangat tinggi' },
     ])
 
     useEffect(() => {
@@ -64,8 +64,11 @@ function Result({ navigation, route }) {
                         <Text style={{ fontSize: 24, fontWeight: 'bold' }}>
                             Score bunda: {totalScore}
                         </Text>
+                        <Text style={{ textAlign: 'center',fontSize: 20, fontWeight: 'bold', color: index === 0 ? '#00b853' : index === 1 ? '#ded600' : '#db3939' }}>
+                            {dataResult[index].status}
+                        </Text>
                         <Text style={{ textAlign: 'center', color: '#538491', marginTop: 10 }}>
-                            {dataResult[index].ket}
+                            Saran: {dataResult[index].ket}
                         </Text>
                         <Image source={images.logoApp} style={{ width: 175, height: 175, borderRadius: 175, marginTop: 10, marginTop: 20 }} />
                         <View style={{ borderBottomColor: 'rgb(250, 202, 220)', borderBottomWidth: 3, width: '50%', marginTop: 10 }}></View>
